@@ -6,7 +6,7 @@ const path = require("path");
 const session = require("express-session");
 const passport = require("passport");
 const mainRoutes = require('./routes/main');
-const dashboardRoutes = require('./routes/dashboard');
+/* const dashboardRoutes = require('./routes/dashboard'); */
 const connectDB = require("./config/database");
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.use("/", mainRoutes);
-app.use("/dashboard", dashboardRoutes);
+/* app.use("/dashboard", dashboardRoutes); */
 
 connectDB().then(()=>{
     app.listen(process.env.PORT || PORT, () => {
