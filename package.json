@@ -1,0 +1,17 @@
+{
+  "name": "fullstack-assignment",
+  "version": "1.0.0",
+  "description": "This is the GWALA full-stack position assignment.\r To run this app, please run the instructions below:",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:client": "cd client && npm run dev",
+    "start:server": "cd server && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
